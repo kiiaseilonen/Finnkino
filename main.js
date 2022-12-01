@@ -1,5 +1,5 @@
  // ladataan elokuvat dropdown valikkoon ja luodaan fadein-efekti bodyyn, kun sivu on ladattu
- $(document).ready(function(){
+ $(window).ready(function(){
   getTheatres();
   $('body').css('display', 'none');
   $('body').fadeIn(500);
@@ -28,7 +28,7 @@ $.get("https://www.finnkino.fi/xml/TheatreAreas/", function(theatres) {
     });
 });
 }
-getTheatres();
+
 
 // luodaan eventlistener, jonka avulla saadaan oikeat päivämäärät näkyviin teattereittain
 $("#ddmenu").change(function () {
